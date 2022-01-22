@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="TO DO LIST" />
+    <title>TO DO LIST</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        /* background-color: red; */
+      }
+      #container::before {
+        content: "";
+        background: url("bg.jpg") no-repeat center center/cover;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        opacity: 0.7;
+      }
+      #head {
+        padding: 0;
+        margin: 0;
+      }
+      #head h1{
+        width: 50%;
+        margin: auto;
+        text-align: center;
+        /* background-color: wheat; */
+      }
+      #ul1{
+          width: 50%;
+          margin: auto;
+          background-color: white;
+          border: 2px solid black;
+          border-radius: 10px;
+      }
+      #ul1 li{
+          /* background-color: white; */
+          /* border-radius: 20px; */
+          text-align: center;
+          font-size: 40px;
+          text-decoration: underline;
+          list-style-type: discloser-open;
+      }
+      
+
+      #button{
+          width: 60%;
+          margin: auto;
+          /* background-color: red; */
+      }
+      #button button{
+          width: 100%;
+          border: 2px solid black;
+          height: 50px;
+          text-align: center;
+          border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="head">
+        <h1>Yor todays To Do List is</h1>
+        <ul id="ul1">
+
+        </ul>
+      </div>
+      <div id="button">
+        <button id="btn" onclick="addme()">ADD</button>
+      </div>
+    </div>
+    <script>
+      function addme() {
+        let menu = document.querySelector("#ul1");
+        let li = document.createElement("li");
+
+        li.textContent = prompt("Enter list here");
+        console.log(menu.textContent);
+        if (li.textContent == undefined) {
+          alert("Enter something");
+        }
+        menu.appendChild(li);
+      }
+    </script>
+  </body>
+</html>
