@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="webpage">
+    <title>Webpage</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0px 0px;
+        margin: 0px 0px;
+        color: black;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .logo {
+        float: left;
+        padding: 10px 50px;
+        color: white;
+      }
+      .nav1 {
+        position: absolute;
+        right: 50px;
+        padding: 10px 0px;
+        color: white;
+      }
+      .header1 {
+        clear: both;
+        text-align: center;
+        padding: 10px 0px;
+        color: white;
+      }
+      article {
+        clear: both;
+        text-align: center;
+        padding: 10px 0px;
+      }
+      .nav1a {
+        text-align: center;
+        padding: 10px 0px;
+      }
+      label {
+        color: white;
+      }
+      .nav1 ul li {
+        display: inline-block;
+      }
+      .nav1 ul li a {
+        padding: 10px 69px;
+        list-style-type: none;
+        color: white;
+        text-decoration: none;
+      }
+      .nav1 ul li a:hover {
+        color: blue;
+      }
+      button {
+        padding: 3px 20px;
+        border: 1px solid black;
+        color: white;
+        background-color: blue;
+      }
+      button:hover {
+        background-color: rgb(187, 187, 245);
+        color: black;
+      }
+      .headarticle {
+        padding: 166px 0px;
+      }
+      .blue::before {
+        content: "";
+        background: url("https://source.unsplash.com/1600x900/?computer")
+          no-repeat center center/cover;
+        position: absolute;
+        height: 485px;
+        width: 100%;
+        z-index: -1;
+        opacity: 1;
+      }
+      input[type="search"] {
+        padding: 4px 86px;
+      }
+      input[type="checkbox"] {
+        padding: 4px 10px;
+      }
+      label {
+        padding: 0px 10px;
+      }
+      .header2 {
+        text-align: center;
+        padding: 15px 0px;
+        color: black;
+      }
+      .nav2 {
+        text-align: center;
+        padding: 15px 0px;
+      }
+      .white::before {
+        content: "";
+        background-color: cadetblue;
+        position: absolute;
+        height: 155px;
+        width: 100%;
+        z-index: -1;
+        opacity: 0.9;
+      }
+      .white {
+        padding: 27px 0px;
+      }
+      .nav2 img {
+        margin: 0px 50px;
+        justify-content: flex-end;
+      }
+      .service {
+        padding-top: 75px;
+      }
+      .service h4,
+      .service h2,
+      .service p {
+        color: black;
+        width: 87%;
+        margin: 26px auto;
+      }
+      .servicebox {
+        display: flex;
+        width: 87%;
+        margin: 0px auto;
+        justify-content: space-between;
+      }
+      .service1 p,
+      .service1 h2,
+      .service1 img {
+        text-align: center;
+        margin: 15px auto;
+        width: 400px;
+      }
+      .plans::before {
+        content: "";
+        background: url("https://source.unsplash.com/1600x900/?computer")
+          no-repeat center center/cover;
+        width: 100%;
+        position: absolute;
+        height: 390px;
+        z-index: -1;
+        opacity: 0.9;
+      }
+      .plans {
+        margin-top: 120px;
+      }
+      .plans h1 {
+        padding-top: 50px;
+      }
+      .plans h1,
+      .plans p {
+        text-align: center;
+        width: 50%;
+        margin: 0px auto;
+      }
+      .plans > p {
+        margin: 5px auto;
+        padding-bottom: 50px;
+      }
+      .plan11 {
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+      }
+      .plan1 {
+        content: "";
+        background-color: white;
+        width: 100%;
+        /* position: absolute; */
+        height: 297px;
+        z-index: -1;
+      }
+      .plan1 {
+        width: 19%;
+      }
+      .plan1 > p {
+        padding: 25px 0px;
+      }
+      .plan101 {
+        background-color: blue;
+        width: 50%;
+        margin: 0px auto;
+        padding: 50px 0px;
+      }
+      .tc {
+        text-align: center;
+      }
+      .list {
+        width: 50%;
+        margin: 0px auto;
+      }
+      .list ul {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 0px auto;
+      }
+      .list ul li {
+        list-style-type: square;
+      }
+      .spb {
+        width: 50%;
+        margin: 20px 65px;
+        border-radius: 0px;
+      }
+      .fea {
+        width: 80%;
+        margin: 0px auto;
+        margin-top: 250px;
+      }
+      .featureplan {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        flex-direction: column;
+      }
+      .featureplan101 {
+        display: flex;
+        width: 595px;
+        border: 1px solid gray;
+      }
+      .featureplan div {
+        margin: 10px 10px;
+      }
+      .featureplan101 img {
+        height: 50px;
+        align-self: center;
+      }
+      .fp {
+        display: flex;
+      }
+      .say::before {
+        content: "";
+        background-color: rgb(243 248 248);
+        width: 100%;
+        position: absolute;
+        height: 440px;
+        z-index: -1;
+      }
+      .container {
+        display: flex;
+        width: 80%;
+        margin: 0px auto;
+        justify-content: space-between;
+        margin-top: 10px;
+      }
+      .container > div {
+        width: 15%;
+        padding: 60px 0px;
+      }
+      .footer::before {
+        content: "";
+        background: url("https://source.unsplash.com/1600x900/?computer")
+          no-repeat center center/cover;
+        height: 275px;
+        position: absolute;
+        width: 100%;
+        z-index: -1;
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="blue">
+      <nav class="headnav">
+        <div class="logo">HOST cloud</div>
+        <div class="nav1">
+          <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">OUR SERVICES</a></li>
+            <li><a href="#">CONTACT US</a></li>
+            <li>
+              <div class="button">
+                <button>Log in</button>
+                <button>Sign Up</button>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="headarticle">
+        <header class="header1">SEARCH YOUR DOMAIN...</header>
+        <article>
+          <input
+            type="search"
+            name="search"
+            id="search"
+            placeholder="Search here"
+          />
+          <button>SEARCH NOW</button>
+        </article>
+      </div>
+      <nav class="nav1a">
+        <input type="checkbox" name="check1" id="check1" />
+        <label for="check1">.com($10/yr)</label>
+        <input type="checkbox" name="check2" id="check2" />
+        <label for="check2">.net($12/yr)</label>
+        <input type="checkbox" name="check3" id="check3" />
+        <label for="check3">.org($8/yr)</label>
+        <input type="checkbox" name="check4" id="check4" />
+        <label for="check4">.com($6/yr)</label>
+      </nav>
+    </section>
+    <section>
+      <div class="white">
+        <header class="header2">
+          TRUSTED BY 1250+ HAPPY CUSTOMERS WORLDWIDE
+        </header>
+        <nav class="nav2">
+          <img
+            src="https://source.unsplash.com/1600x900/?computer"
+            alt="image"
+            height="50px"
+            width="100px"
+          />
+          <img
+            src="https://source.unsplash.com/1600x900/?computer"
+            alt="image"
+            height="50px"
+            width="100px"
+          />
+          <img
+            src="https://source.unsplash.com/1600x900/?computer"
+            alt="image"
+            height="50px"
+            width="100px"
+          />
+          <img
+            src="https://source.unsplash.com/1600x900/?computer"
+            alt="image"
+            height="50px"
+            width="100px"
+          />
+        </nav>
+      </div>
+    </section>
+    <section>
+      <div class="service">
+        <h4 style="color: rgb(50, 198, 243)">Hosting Services</h4>
+        <h2>Service we provide</h2>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi sunt
+          itaque aliquam hic natus, sapiente dignissimos mollitia qui beatae!
+          Dignissimos? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          In reiciendis, repellendus velit impedit ab atque esse ad unde at
+          minus.
+        </p>
+      </div>
+      <div class="servicebox">
+        <div class="service1">
+          <img
+            src="https://source.unsplash.com/1600x900/?computer"
+            alt="image"
+          />
+          <h2>FULLY DEDICATED</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim,
+            explicabo! Cumque, maiores reprehenderit eius repellendus sunt,
+            dolores debitis, aperiam iure
+          </p>
+        </div>
+        <div class="service1">
+          <img
+            src="https://source.unsplash.com/1600x900/?computer"
+            alt="image"
+          />
+          <h2>10X LIGHT CLOUD</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim,
+            explicabo! Cumque, maiores reprehenderit eius repellendus sunt,
+            dolores debitis, aperiam iure
+          </p>
+        </div>
+        <div class="service1">
+          <img
+            src="https://source.unsplash.com/1600x900/?computer"
+            alt="image"
+          />
+          <h2>MANAGED VPS CLOUD</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim,
+            explicabo! Cumque, maiores reprehenderit eius repellendus sunt,
+            dolores debitis, aperiam iure
+          </p>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="plans">
+        <h1>Cloud hosting plans</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos saepe in
+          harum animi, deserunt corporis quod. Iusto ad, vero sequi, aut facilis
+          quis quo ipsum, nemo repellendus velit saepe provident.
+        </p>
+        <div class="plan11">
+          <div class="plan1">
+            <p>BASIC CLOUD 5X</p>
+            <div class="plan101">
+              <h2 class="tc">$</h2>
+              <p>Monthly</p>
+            </div>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto
+              repudiandae necessitatibus similique voluptate dolore vitae!
+            </p>
+            <hr />
+            <div class="list">
+              <ul>
+                <li>500GB Storage</li>
+                <li>3TB Data Transfer</li>
+                <li>Basic Management Panel</li>
+                <li>24/7 Service</li>
+                <li>100 Premium Themes</li>
+                <li>Cancel Any Time</li>
+              </ul>
+            </div>
+            <button class="spb">START PLAN</button>
+          </div>
+          <div class="plan1">
+            <p>BASIC CLOUD 5X</p>
+            <div class="plan101">
+              <h2 class="tc">$</h2>
+              <p>Monthly</p>
+            </div>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto
+              repudiandae necessitatibus similique voluptate dolore vitae!
+            </p>
+            <hr />
+            <div class="list">
+              <ul>
+                <li>500GB Storage</li>
+                <li>3TB Data Transfer</li>
+                <li>Basic Management Panel</li>
+                <li>24/7 Service</li>
+                <li>100 Premium Themes</li>
+                <li>Cancel Any Time</li>
+              </ul>
+            </div>
+            <button class="spb">START PLAN</button>
+          </div>
+          <div class="plan1">
+            <p>BASIC CLOUD 5X</p>
+            <div class="plan101">
+              <h2 class="tc">$</h2>
+              <p>Monthly</p>
+            </div>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto
+              repudiandae necessitatibus similique voluptate dolore vitae!
+            </p>
+            <hr />
+            <div class="list">
+              <ul>
+                <li>500GB Storage</li>
+                <li>3TB Data Transfer</li>
+                <li>Basic Management Panel</li>
+                <li>24/7 Service</li>
+                <li>100 Premium Themes</li>
+                <li>Cancel Any Time</li>
+              </ul>
+            </div>
+            <button class="spb">START PLAN</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="fea">
+      <div class="feature">
+        <div class="tc">
+          <p style="padding-top: 140px; color: rgb(28, 195, 218)">
+            Best Quality For You
+          </p>
+          <h3>Cloud Features</h3>
+        </div>
+        <div class="featureplan">
+          <div class="fp">
+            <div class="featureplan101">
+              <img
+                src="https://source.unsplash.com/1600x900/?computer"
+                alt="image"
+              />
+              <div>
+                <h2>Load Balanced</h2>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
+                </p>
+              </div>
+            </div>
+            <div class="featureplan101">
+              <img
+                src="https://source.unsplash.com/1600x900/?computer"
+                alt="image"
+              />
+              <div>
+                <h2>Load Balanced</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+              </div>
+            </div>
+          </div>
+          <div class="fp">
+            <div class="featureplan101">
+              <img
+                src="https://source.unsplash.com/1600x900/?computer"
+                alt="image"
+              />
+              <div>
+                <h2>Load Balanced</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+              </div>
+            </div>
+            <div class="featureplan101">
+              <img
+                src="https://source.unsplash.com/1600x900/?computer"
+                alt="image"
+              />
+              <div>
+                <h2>Load Balanced</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+              </div>
+            </div>
+          </div>
+          <div class="fp">
+            <div class="featureplan101">
+              <img
+                src="https://source.unsplash.com/1600x900/?computer"
+                alt="image"
+              />
+              <div>
+                <h2>Load Balanced</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+              </div>
+            </div>
+            <div class="featureplan101">
+              <img
+                src="https://source.unsplash.com/1600x900/?computer"
+                alt="image"
+              />
+              <div>
+                <h2>Load Balanced</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="say">
+      <div class="tc">
+        <p style="padding-top: 50px; color: rgb(28, 195, 218)">Testinomials</p>
+        <h3>What they say about us</h3>
+        <img
+          src="https://source.unsplash.com/1600x900/?computer"
+          alt="image"
+          style="height: 100px; padding: 15px 0px"
+        />
+        <p style="font-style: italic">
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
+          assumenda illum eaque adipisci quisquam soluta architecto maiores
+          repudiandae, tenetur impedit!""
+        </p>
+        <h3 style="color: rgb(28, 195, 218)">William Smith</h3>
+        <p style="padding-bottom: 50px">Co Founder</p>
+      </div>
+    </section>
+    <section class="footer">
+      <div class="container">
+        <div>
+          <ul>
+            <li>Lorem ipsum dolor sit.</li>
+            <li>Lorem ipsum dolor sit.</li>
+            <li>Lorem ipsum dolor sit.</li>
+            <li>Lorem ipsum dolor sit.</li>
+            <li>Lorem ipsum dolor sit.</li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li>Lorem ipsum dolor sit.</li>
+            <li>Lorem ipsum dolor sit.</li>
+            <li>Lorem ipsum dolor sit.</li>
+            <li>Lorem ipsum dolor sit.</li>
+            <li>Lorem ipsum dolor sit.</li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li>Lorem ipsum dolor sit.</li>
+            <li>Lorem ipsum dolor sit.</li>
+            <li>Lorem ipsum dolor sit.</li>
+            <li>Lorem ipsum dolor sit.</li>
+            <li>Lorem ipsum dolor sit.</li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li>Lorem ipsum dolor sit.</li>
+            <li>Lorem ipsum dolor sit.</li>
+            <li>Lorem ipsum dolor sit.</li>
+            <li>Lorem ipsum dolor sit.</li>
+            <li>Lorem ipsum dolor sit.</li>
+          </ul>
+        </div>
+      </div>
+      <hr />
+      <div class="tc" style="padding: 20px 0px">
+        Copyright&#169;2020 cloud costing company
+      </div>
+    </section>
+  </body>
+</html>
