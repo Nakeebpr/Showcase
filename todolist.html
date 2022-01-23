@@ -81,8 +81,9 @@
 
         li.textContent = prompt("Enter list here");
         console.log(menu.textContent);
-        if (li.textContent == undefined) {
+        if (li.textContent == false) {
           alert("Enter something");
+          li.textContent=prompt("Enter list here")
         }
         menu.appendChild(li);
       }
