@@ -76,18 +76,18 @@
     </div>
     <script>
       function addme() {
-        let menu = document.querySelector("#ul1");
+        let menu= document.querySelector("#ul1");
         let li = document.createElement("li");
 
         li.textContent = prompt("Enter list here");
         console.log(menu.textContent);
-        if (li.textContent == false) {
+        while (li.textContent == false) {
           alert("Enter something");
           li.textContent=prompt("Enter list here")
+          }
+          menu.appendChild(li);
         }
-        menu.appendChild(li);
-      }
-      
+
     </script>
   </body>
 </html>
